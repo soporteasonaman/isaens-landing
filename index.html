@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ISAENS - Prestador de Servicios Electrónicos de Confianza. Validación de firmas electrónicas y sellos de tiempo certificados con plena validez jurídica en España y Europa." />
+  <meta name="keywords" content="validación firmas electrónicas, sellos de tiempo, eIDAS, certeza jurídica, confianza digital, ISAENS" />
+  <meta name="author" content="ISAENS" />
+  <meta property="og:title" content="ISAENS: Transformamos la Incertidumbre Digital en Certeza Jurídica" />
+  <meta property="og:description" content="Prestador de Servicios de Confianza supervisado. Validación de firmas electrónicas y sellado de tiempo con valor probatorio reforzado." />
+  <meta property="og:type" content="website" />
+  <title>ISAENS | Certeza Jurídica Digital</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            teal: {
+              50:  '#f0fafa',
+              100: '#d8f2f0',
+              200: '#b4e5e1',
+              300: '#87d0ca',
+              400: '#77beb8',
+              500: '#5aa8a1',
+              600: '#44908a',
+            },
+            navy: '#1a3a5c',
+            ink:  '#1a202c',
+            soft: '#f7f9fc',   /* gris muy claro — fondo secciones alternas */
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a202c; background: #fff; }
+
+    /* ── Reveal ── */
+    .reveal { opacity:0; transform:translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    .reveal-d1 { transition-delay:.10s; }
+    .reveal-d2 { transition-delay:.20s; }
+    .reveal-d3 { transition-delay:.30s; }
+
+    /* ══ NAVBAR ══ */
+    /* Altura 80px, fondo blanco, borde inferior suave */
+    #navbar { background:#fff; border-bottom:1px solid #e8edf2; transition: box-shadow .3s; }
+    #navbar.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.08); }
+
+    /* ══ HERO ══ */
+    .hero-bg {
+      background: url('img1.png') center center / cover no-repeat;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      /* Overlay: izquierda muy oscura para leer texto, derecha más transparente */
+      background: linear-gradient(100deg, rgba(10,24,40,.88) 0%, rgba(10,24,40,.75) 50%, rgba(10,24,40,.35) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; }
+
+    /* ══ JERARQUÍA TIPOGRÁFICA DE SECCIÓN ══
+       El label es el titular grande y llamativo (teal, bold)
+       El h2 es el subtítulo complementario, más pequeño                */
+    .sec-label {
+      display: block;
+      font-size: clamp(1.6rem, 3vw, 2.25rem); /* 26–36px */
+      font-weight: 800;
+      color: #77beb8;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    .sec-h2 {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);  /* 16–20px */
+      font-weight: 500;
+      color: #4a5568;
+      line-height: 1.65;
+      margin-top: .4rem;
+    }
+    /* Variante sobre fondo oscuro */
+    .sec-h2-light { color: rgba(255,255,255,.65); }
+
+    /* ══ BOTONES ══ */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #77beb8; color: #0d2a27; font-weight: 700;
+      padding: .75rem 1.75rem; border-radius: .5rem;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      font-size: .9375rem;
+    }
+    .btn-primary:hover { background: #5aa8a1; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(119,190,184,.35); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 2px solid #77beb8; color: #77beb8; font-weight: 600;
+      padding: .7rem 1.6rem; border-radius: .5rem;
+      transition: background .2s, color .2s;
+      font-size: .9375rem;
+    }
+    .btn-outline:hover { background: rgba(119,190,184,.12); }
+
+    .btn-ghost-dark {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 2px solid rgba(119,190,184,.4); color: #77beb8; font-weight: 600;
+      padding: .7rem 1.6rem; border-radius: .5rem;
+      transition: border-color .2s, background .2s;
+      font-size: .9375rem;
+    }
+    .btn-ghost-dark:hover { border-color: #77beb8; background: rgba(119,190,184,.1); }
+
+    /* ══ CARDS ══ */
+    .card {
+      background: #fff; border: 1px solid #e8edf2;
+      border-radius: 1rem; overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.09); }
+
+    /* ══ FEATURE BLOCKS — texto + imagen alternados ══ */
+    .feature-block { padding: 5rem 0; }
+    .feature-block:nth-child(even) { background: #f7f9fc; }
+
+    /* ══ FAQ ══ */
+    .faq-body { max-height:0; overflow:hidden; transition: max-height .38s ease, padding .3s ease; }
+    .faq-body.open { max-height: 500px; padding-bottom: 1.25rem; }
+    .faq-icon { transition: transform .3s; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* ══ TICKS ══ */
+    .tick { color: #77beb8; flex-shrink: 0; }
+
+    /* ══ STATS NUM ══ */
+    .stat-num { font-size: 2.5rem; font-weight: 800; color: #77beb8; line-height: 1; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR — fondo blanco, logo a tamaño real, 80px alto
+  ══════════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between" style="height:80px;">
+
+        <!-- Logo — colores originales del SVG, sin filtros -->
+        <a href="#" class="flex-shrink-0">
+          <img src="logo.svg" alt="ISAENS" style="height:46px; width:auto;" />
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex items-center gap-8 text-[.9375rem] font-medium text-gray-500">
+          <li><a href="#servicios" class="hover:text-teal-400 transition-colors duration-150">Servicios</a></li>
+          <li><a href="#garantias" class="hover:text-teal-400 transition-colors duration-150">Garantías</a></li>
+          <li><a href="#nosotros"  class="hover:text-teal-400 transition-colors duration-150">Nosotros</a></li>
+          <li><a href="#faq"       class="hover:text-teal-400 transition-colors duration-150">FAQ</a></li>
+          <li><a href="#contacto"  class="hover:text-teal-400 transition-colors duration-150">Contacto</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary hidden md:inline-flex">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Validar ahora
+        </a>
+
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden text-gray-600 focus:outline-none" aria-label="Menú">
+          <svg id="ico-open"  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="ico-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div id="mob-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-5 space-y-3 text-[.9375rem] font-medium text-gray-600">
+      <a href="#servicios" class="block hover:text-teal-400" onclick="closeMob()">Servicios</a>
+      <a href="#garantias" class="block hover:text-teal-400" onclick="closeMob()">Garantías</a>
+      <a href="#nosotros"  class="block hover:text-teal-400" onclick="closeMob()">Nosotros</a>
+      <a href="#faq"       class="block hover:text-teal-400" onclick="closeMob()">FAQ</a>
+      <a href="#contacto"  class="block hover:text-teal-400" onclick="closeMob()">Contacto</a>
+      <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary block text-center mt-2">Validar ahora</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════
+       HERO — imagen full-screen con overlay
+  ══════════════════════════════════════════════════ -->
+  <section id="inicio" class="hero-bg" style="padding-top:80px;">
+    <div class="hero-content w-full max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-36">
+      <div class="max-w-2xl reveal">
+
+        <!-- Badge -->
+        <span class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
+              style="background:rgba(119,190,184,.18); border:1px solid rgba(119,190,184,.4); color:#77beb8;">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          Prestador de Servicios de Confianza — Supervisado por el Ministerio
+        </span>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-5">
+          Transformamos la Incertidumbre Digital en
+          <span style="color:#77beb8;"> Certeza Jurídica</span>
+        </h1>
+
+        <p class="text-lg leading-relaxed mb-9" style="color:rgba(255,255,255,.78);">
+          En un entorno donde la autenticidad y seguridad de los documentos son fundamentales, te ofrecemos las herramientas para operar con total tranquilidad. Cada documento que gestionas está respaldado por un servicio fiable, seguro y legalmente sólido.
+        </p>
+
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3">
+          <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Comenzar a Validar
+          </a>
+          <a href="https://ts.isaens.com" target="_blank" rel="noopener" class="btn-ghost-dark">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Comenzar con los Sellos de Tiempo
+          </a>
+          <a href="#servicios" class="btn-ghost-dark" style="border-color:rgba(255,255,255,.25); color:rgba(255,255,255,.8);">
+            Conocer Nuestros Servicios
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+
+        <!-- Trust strip -->
+        <div class="mt-10 pt-6 flex flex-wrap gap-5 text-xs font-medium" style="border-top:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.55);">
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Conforme eIDAS</span>
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>+500 Empresas</span>
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Seguro RC 1.500.000 €</span>
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>99,9% Disponibilidad</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flecha scroll -->
+    <a href="#problema" aria-label="Siguiente sección"
+       class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-xs opacity-60 hover:opacity-100 transition-opacity"
+       style="color:#77beb8; position:absolute;">
+      <span class="font-medium">Descubre más</span>
+      <svg class="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </a>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       PROBLEMA + SOLUCIÓN
+       Bloque 1: texto izq + imagen dcha  (fondo blanco)
+       Bloque 2: imagen izq + texto dcha  (fondo soft)
+  ══════════════════════════════════════════════════ -->
+
+  <!-- Encabezado de sección -->
+  <div id="problema" class="bg-white pt-20 pb-4">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center reveal">
+      <span class="sec-label">El desafío</span>
+      <p class="sec-h2">¿Tus documentos electrónicos son realmente fiables?</p>
+      <p class="mt-4 text-base leading-relaxed text-gray-500 max-w-2xl mx-auto">
+        En tu día a día profesional, gestionas decenas de documentos electrónicos: contratos, notificaciones, facturas, acuerdos… La incertidumbre digital genera riesgos que tu negocio no puede permitirse.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bloque A — El Problema: texto izq · imagen dcha — fondo blanco -->
+  <div class="feature-block bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Texto -->
+        <div class="reveal">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Antes de ISAENS</p>
+          <h3 class="text-2xl font-bold text-navy mb-5">El riesgo oculto de los documentos electrónicos</h3>
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+              <span>No puedes verificar con certeza <strong class="text-gray-800">quién firmó</strong> ni si el certificado era válido.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+              <span>No existe prueba fehaciente de que un documento <strong class="text-gray-800">existía en una fecha concreta</strong>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+              <span>Los documentos pueden ser <strong class="text-gray-800">alterados</strong> sin dejar rastro visible.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+              <span>En un litigio, sin evidencias técnicas, la <strong class="text-gray-800">carga de la prueba</strong> recae completamente en ti.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Imagen -->
+        <div class="reveal reveal-d2">
+          <img src="Gemini_Generated_Image_obcfcpobcfcpobcf.png"
+               alt="Incertidumbre en la gestión de documentos digitales"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:400px;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bloque B — La Solución: imagen izq · texto dcha — fondo soft -->
+  <div class="feature-block" style="background:#f7f9fc;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Imagen -->
+        <div class="reveal order-2 lg:order-1">
+          <img src="Gemini_Generated_Image_5sngkr5sngkr5sng.png"
+               alt="Solución ISAENS — verificación de documentos digitales"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:400px;" loading="lazy" />
+        </div>
+
+        <!-- Texto -->
+        <div class="reveal reveal-d2 order-1 lg:order-2">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Con ISAENS</p>
+          <h3 class="text-2xl font-bold text-navy mb-5">Certeza jurídica para cada documento</h3>
+          <p class="text-gray-500 mb-6 leading-relaxed">Convertimos la incertidumbre en certeza a través de dos servicios complementarios:</p>
+
+          <div class="space-y-5">
+            <!-- VOL -->
+            <div class="p-5 rounded-xl border border-teal-100 bg-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Validación de Firmas — V.O.L.</p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start gap-2"><svg class="w-4 h-4 tick mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong class="text-gray-800">¿Quién firmó?</strong> Identidad y validez del certificado digital.</span></li>
+                <li class="flex items-start gap-2"><svg class="w-4 h-4 tick mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong class="text-gray-800">¿Fue alterado?</strong> Integridad del contenido verificada.</span></li>
+                <li class="flex items-start gap-2"><svg class="w-4 h-4 tick mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong class="text-gray-800">¿La firma es válida?</strong> Certificado no caducado ni revocado.</span></li>
+              </ul>
+            </div>
+            <!-- Sellos -->
+            <div class="p-5 rounded-xl border border-teal-100 bg-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Sellado de Tiempo Certificado</p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start gap-2"><svg class="w-4 h-4 tick mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong class="text-gray-800">¿Cuándo existía?</strong> Fecha y hora irrefutables vinculadas al archivo.</span></li>
+                <li class="flex items-start gap-2"><svg class="w-4 h-4 tick mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span><strong class="text-gray-800">¿Fue modificado?</strong> Integridad garantizada desde el sellado.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SERVICIOS
+  ══════════════════════════════════════════════════ -->
+
+  <!-- Encabezado -->
+  <div id="servicios" class="bg-white pt-20 pb-4">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center reveal">
+      <span class="sec-label">Nuestras Soluciones</span>
+      <p class="sec-h2">Tecnología para dar Servicios Garantistas</p>
+      <p class="mt-4 text-base text-gray-500">Ponemos a tu disposición herramientas diseñadas para ofrecerte certeza y seguridad en tus operaciones diarias.</p>
+    </div>
+  </div>
+
+  <!-- Servicio V.O.L. — texto dcha · imagen izq — fondo blanco -->
+  <div class="feature-block bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Imagen -->
+        <div class="reveal">
+          <img src="Copilot_20260331_130200.png"
+               alt="Servicio V.O.L. — Validación de firmas electrónicas"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:420px;" loading="lazy" />
+        </div>
+
+        <!-- Texto -->
+        <div class="reveal reveal-d2">
+          <span class="inline-block bg-teal-50 text-teal-600 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">V.O.L.</span>
+          <h3 class="text-2xl font-bold text-navy mb-4">Servicio de Validación de Firmas On Line</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Nuestra herramienta ágil e intuitiva que verifica automáticamente la <strong class="text-gray-800">autenticidad, integridad y validez legal</strong> de las firmas electrónicas en tus documentos. Obtén un informe de evidencias con valor probatorio reforzado en segundos.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-600 mb-7">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporta PAdES, CAdES, XAdES, JAdES, ASiC</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Informe de evidencias firmado por ISAENS</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Sin instalación — arrastra y suelta</li>
+          </ul>
+          <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary">
+            Saber más sobre V.O.L.
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Servicio Sellos — texto izq · imagen dcha — fondo soft -->
+  <div class="feature-block" style="background:#f7f9fc;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Texto -->
+        <div class="reveal">
+          <span class="inline-block bg-teal-50 text-teal-600 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Sellos de Tiempo</span>
+          <h3 class="text-2xl font-bold text-navy mb-4">Servicio de Sellos de Tiempo Certificados</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Garantiza la existencia e integridad de tus documentos empresariales en un momento concreto. Un mecanismo certificado que <strong class="text-gray-800">vincula un archivo con una fecha y hora irrefutables</strong>, protegiéndote frente a litigios y manipulaciones.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-600 mb-7">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Sellado en menos de 3 segundos</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Estándar RFC 3161 — válido eIDAS</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 tick" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>API para integración empresarial y soporte 24/7</li>
+          </ul>
+          <a href="https://ts.isaens.com" target="_blank" rel="noopener" class="btn-outline">
+            Saber más sobre Sellos de Tiempo
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Imagen -->
+        <div class="reveal reveal-d2">
+          <img src="Copilot_20260331_130532.png"
+               alt="Servicio de Sellos de Tiempo Certificados"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:420px;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       PRUEBA SOCIAL — fondo teal muy claro
+  ══════════════════════════════════════════════════ -->
+  <section id="garantias" class="py-20 lg:py-28" style="background:#f0fafa;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="sec-label">Autoridad &amp; Confianza</span>
+        <p class="sec-h2">Tu Confianza, Legalmente Respaldada</p>
+        <p class="mt-4 text-base text-gray-500 leading-relaxed">
+          Elegir ISAENS es optar por las máximas garantías. Somos un <strong class="text-gray-700">Prestador de Servicios Electrónicos de Confianza</strong> supervisado por el Ministerio para la Transformación Digital y de la Función Pública en España.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
+        <div class="reveal bg-white rounded-2xl p-6 text-center border border-teal-100 shadow-sm">
+          <p class="stat-num">+500</p>
+          <p class="text-sm text-gray-500 mt-1">Empresas que confían</p>
+        </div>
+        <div class="reveal reveal-d1 bg-white rounded-2xl p-6 text-center border border-teal-100 shadow-sm">
+          <p class="stat-num">1,5M€</p>
+          <p class="text-sm text-gray-500 mt-1">Seguro de RC</p>
+        </div>
+        <div class="reveal reveal-d2 bg-white rounded-2xl p-6 text-center border border-teal-100 shadow-sm">
+          <p class="stat-num">99,9%</p>
+          <p class="text-sm text-gray-500 mt-1">Disponibilidad</p>
+        </div>
+        <div class="reveal reveal-d3 bg-white rounded-2xl p-6 text-center border border-teal-100 shadow-sm">
+          <p class="stat-num">&lt;3s</p>
+          <p class="text-sm text-gray-500 mt-1">Tiempo de sellado</p>
+        </div>
+      </div>
+
+      <!-- Garantías grid -->
+      <div class="grid md:grid-cols-2 gap-5 mb-12">
+
+        <div class="reveal bg-white rounded-xl p-5 border border-teal-100 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-50">
+            <svg class="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy mb-1">Supervisión y Control</h4>
+            <p class="text-sm text-gray-500">Cumplimiento normativo continuo y riguroso garantizado por la autoridad competente.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d1 bg-white rounded-xl p-5 border border-teal-100 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-50">
+            <svg class="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy mb-1">Seguridad Técnica Auditada</h4>
+            <p class="text-sm text-gray-500">Sistemas auditados externamente. Cifrado SSL/TLS, CSP, validación de archivos y aislamiento en contenedores.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d2 bg-white rounded-xl p-5 border border-teal-100 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-50">
+            <svg class="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy mb-1">Responsabilidad Garantizada</h4>
+            <p class="text-sm text-gray-500">Seguro de responsabilidad civil de <strong class="text-gray-700">1.500.000 €</strong> que respalda todas nuestras operaciones.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d3 bg-white rounded-xl p-5 border border-teal-100 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-teal-50">
+            <svg class="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.589-1.202L18.75 4.97z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy mb-1">Validez Jurídica Reforzada</h4>
+            <p class="text-sm text-gray-500">Los informes gozan de <strong class="text-gray-700">valor probatorio reforzado</strong> conforme al Reglamento eIDAS.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center reveal">
+        <p class="text-gray-600 mb-5">Únete a más de <strong class="text-navy">500 empresas</strong> que ya confían en ISAENS</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary">Comenzar a Validar</a>
+          <a href="https://ts.isaens.com"  target="_blank" rel="noopener" class="btn-outline">Sellos de Tiempo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SOBRE NOSOTROS
+       Misión: texto izq · imagen dcha  — fondo blanco
+       Visión: imagen izq · texto dcha  — fondo soft
+  ══════════════════════════════════════════════════ -->
+
+  <div id="nosotros" class="bg-white pt-20 pb-4">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center reveal">
+      <span class="sec-label">Quiénes somos</span>
+      <p class="sec-h2">Construyendo un Futuro Digital más Seguro</p>
+    </div>
+  </div>
+
+  <!-- Misión -->
+  <div class="feature-block bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Nuestra Misión</p>
+          <h3 class="text-2xl font-bold text-navy mb-5">Confianza digital para empresas y entidades públicas en Europa</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Ofrecer soluciones integrales de confianza digital a empresas, corporaciones y entidades del sector público en toda Europa. Desarrollamos nuestras soluciones conforme al <strong class="text-gray-700">Reglamento eIDAS</strong> para asegurar los más altos estándares de eficacia operativa y respaldo legal.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">eIDAS</span>
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">B2B &amp; Sector Público</span>
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">Toda Europa</span>
+          </div>
+        </div>
+        <div class="reveal reveal-d2">
+          <img src="Copilot_20260331_130343.png" alt="Misión ISAENS — confianza digital en Europa"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:400px;" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visión -->
+  <div class="feature-block" style="background:#f7f9fc;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal order-2 lg:order-1">
+          <img src="Copilot_20260331_130832.png" alt="Visión ISAENS — economía digital segura"
+               class="w-full rounded-2xl shadow-lg object-cover" style="max-height:400px;" loading="lazy"/>
+        </div>
+        <div class="reveal reveal-d2 order-1 lg:order-2">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Nuestra Visión</p>
+          <h3 class="text-2xl font-bold text-navy mb-5">Referentes en la certificación electrónica europea</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Consolidar un modelo de seguridad jurídica digital universalmente accesible. Aspiramos a ser <strong class="text-gray-700">referentes en el mercado de la certificación electrónica</strong>, contribuyendo activamente al desarrollo de una economía digital más segura, equitativa y transparente.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">Referentes en certificación</span>
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">Economía digital segura</span>
+            <span class="bg-teal-50 text-teal-600 text-xs font-semibold px-3 py-1 rounded-full">Accesible &amp; transparente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partners -->
+  <div class="bg-white py-12">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 reveal">
+      <p class="text-center text-sm font-medium text-gray-400 mb-6">Colaboramos con entidades de prestigio</p>
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <div class="px-6 py-3 rounded-xl text-sm font-semibold border border-teal-100 bg-teal-50 text-teal-600">Fideicomiso EAD</div>
+        <div class="px-6 py-3 rounded-xl text-sm font-semibold border border-teal-100 bg-teal-50 text-teal-600">Uanataca</div>
+        <div class="px-6 py-3 rounded-xl text-sm font-semibold border border-teal-100 bg-teal-50 text-teal-600">Ministerio de Transformación Digital</div>
+        <div class="px-6 py-3 rounded-xl text-sm font-semibold border border-teal-100 bg-teal-50 text-teal-600">RFC 3161</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════ -->
+  <section id="faq" class="py-20 lg:py-28" style="background:#f7f9fc;">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center mb-14 reveal">
+        <span class="sec-label">Preguntas Frecuentes</span>
+        <p class="sec-h2">Todo lo que necesitas saber</p>
+        <p class="mt-3 text-sm text-gray-500">Resolvemos las dudas más habituales sobre nuestros servicios.</p>
+      </div>
+
+      <!-- V.O.L. -->
+      <div class="mb-10 reveal">
+        <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-4 pb-2 text-teal-500" style="border-bottom:2px solid #b4e5e1;">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Sobre el Servicio V.O.L.
+        </h3>
+        <div class="space-y-2">
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Qué es exactamente el Validador On Line (V.O.L.)?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              El V.O.L. verifica de forma automática la autenticidad, integridad y validez legal de las firmas electrónicas. En segundos responde: ¿Quién firmó?, ¿Fue alterado? y ¿La firma era válida?
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Necesito conocimientos técnicos para usarlo?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              No. El proceso es tan sencillo como arrastrar y soltar el archivo. Sin instalaciones ni configuraciones complejas.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Para quién es útil el V.O.L.?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Asesorías, despachos de abogados, empresas que gestionan contratos y RRHH, y particulares que necesitan verificar documentos como contratos de alquiler o compraventa.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Qué tipo de firmas y formatos puedo validar?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Estándares: PAdES, CAdES, XAdES, JAdES, ASiC y Timestamp. Formatos: .pdf, .p7s, .p7m, .xml, .xsig, .json, .zip, .asice, .tsr, entre otros. Tamaño máximo: 50 MB.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seguridad -->
+      <div class="mb-10 reveal">
+        <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-4 pb-2 text-teal-500" style="border-bottom:2px solid #b4e5e1;">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+          Seguridad y Confidencialidad
+        </h3>
+        <div class="space-y-2">
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Qué pasa con mis documentos una vez los subo?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Los documentos <strong class="text-gray-700">no se almacenan en nuestros servidores</strong>. Se procesan en memoria y se eliminan automáticamente al finalizar la validación.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Es seguro utilizar la plataforma?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Sí. Cifrado SSL/TLS, políticas CSP, validación estricta de archivos y aislamiento de procesos en contenedores para reducir la superficie de ataque.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Qué valor legal tiene el Informe de Evidencias?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Emitido por ISAENS como Prestador supervisado, goza de <strong class="text-gray-700">valor probatorio reforzado</strong>. En litigio, simplifica la carga de la prueba.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sellos -->
+      <div class="reveal">
+        <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-4 pb-2 text-teal-500" style="border-bottom:2px solid #b4e5e1;">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Servicio de Sellos de Tiempo
+        </h3>
+        <div class="space-y-2">
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Qué es exactamente un sello de tiempo digital?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Un mecanismo certificado que vincula un archivo con una fecha y hora irrefutables. Demuestra que el documento existía en ese momento y que no ha sido modificado desde entonces.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Tiene validez legal en España y Europa?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Sí. Cumplimiento estricto del <strong class="text-gray-700">Reglamento (UE) Nº 910/2014 (eIDAS)</strong>, el marco legal que regula los servicios de confianza en la UE.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Puedo integrar el sellado en mis sistemas?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Sí. Ofrecemos <strong class="text-gray-700">API REST</strong> para automatizar el sellado desde tus aplicaciones. Disponibilidad 99,9% y soporte técnico especializado 24/7.
+            </div>
+          </div>
+          <div class="faq-item bg-white rounded-xl overflow-hidden border border-gray-200">
+            <button class="faq-btn w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors" aria-expanded="false">
+              <span>¿Es un proceso complicado o lento?</span>
+              <svg class="faq-icon w-5 h-5 text-teal-400 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+            <div class="faq-body px-5 text-gray-500 text-sm leading-relaxed">
+              Todo lo contrario. El tiempo promedio para generar un sello de tiempo es <strong class="text-gray-700">inferior a 3 segundos</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer id="contacto" style="background:#080f1a; color:rgba(255,255,255,.55);">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div>
+          <a href="#" class="inline-block mb-4">
+            <img src="logo.svg" alt="ISAENS" style="height:40px; width:auto;" class="brightness-0 invert" />
+          </a>
+          <p class="text-sm leading-relaxed mb-5">
+            Prestador de Servicios Electrónicos de Confianza. Certeza jurídica para la economía digital.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"
+               class="w-9 h-9 rounded-lg flex items-center justify-center transition-all"
+               style="background:rgba(255,255,255,.08);"
+               onmouseover="this.style.background='#77beb8';this.style.color='#0d2a27'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='inherit'">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter/X"
+               class="w-9 h-9 rounded-lg flex items-center justify-center transition-all"
+               style="background:rgba(255,255,255,.08);"
+               onmouseover="this.style.background='#77beb8';this.style.color='#0d2a27'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='inherit'">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicios -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://vol.isaens.com" target="_blank" rel="noopener" class="hover:text-white transition-colors">Validación de Firmas — V.O.L.</a></li>
+            <li><a href="https://ts.isaens.com"  target="_blank" rel="noopener" class="hover:text-white transition-colors">Sellos de Tiempo Certificados</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Aviso Legal</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Política de Cookies</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Condiciones de Contratación</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              <a href="mailto:info@isaens.com" class="hover:text-white transition-colors">info@isaens.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+              <span>[Número de teléfono]</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              <span>C/ Vicente Fuentes Sansano, nº37 A<br/>C.P 03205 Elche — Alicante</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="border-top:1px solid rgba(255,255,255,.06);">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="color:rgba(255,255,255,.3);">
+        <p>&copy; <span id="year"></span> ISAENS. Todos los derechos reservados.</p>
+        <p>Prestador supervisado por el Ministerio para la Transformación Digital y de la Función Pública.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════════ -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Navbar sombra al scroll */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+
+    /* Menú móvil */
+    document.getElementById('hamburger').addEventListener('click', () => {
+      const menu    = document.getElementById('mob-menu');
+      const open    = document.getElementById('ico-open');
+      const close   = document.getElementById('ico-close');
+      const visible = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', visible);
+      open.classList.toggle('hidden', !visible);
+      close.classList.toggle('hidden', visible);
+    });
+    function closeMob() {
+      document.getElementById('mob-menu').classList.add('hidden');
+      document.getElementById('ico-open').classList.remove('hidden');
+      document.getElementById('ico-close').classList.add('hidden');
+    }
+
+    /* Reveal on scroll */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item   = btn.closest('.faq-item');
+        const body   = item.querySelector('.faq-body');
+        const icon   = btn.querySelector('.faq-icon');
+        const isOpen = body.classList.contains('open');
+        item.closest('.space-y-2').querySelectorAll('.faq-body.open').forEach(b => {
+          b.classList.remove('open');
+          b.closest('.faq-item').querySelector('.faq-icon').classList.remove('open');
+          b.closest('.faq-item').querySelector('.faq-btn').setAttribute('aria-expanded','false');
+        });
+        if (!isOpen) { body.classList.add('open'); icon.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Archivos que no van al repositorio
+*.rar
+*.docx
+node_modules/
+.DS_Store
+Thumbs.db

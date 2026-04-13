@@ -1,0 +1,9 @@
+# Archivos que NO deben entrar en la imagen Docker
+.git
+.gitignore
+*.rar
+*.docx
+*.md
+docker-compose.yml
+.dockerignore
+node_modules
