@@ -6,4 +6,4 @@ services:
     container_name: isaens-landing
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8100:80"
