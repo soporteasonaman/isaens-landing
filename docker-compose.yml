@@ -2,17 +2,8 @@ version: "3.8"
 
 services:
   isaens-landing:
-    image: ghcr.io/TU_USUARIO/isaens-landing:latest   # ← cambia TU_USUARIO
-    # Si construyes localmente en lugar de usar la imagen de registry:
-    # build: .
+    image: ghcr.io/soporteasonaman/isaens-landing:latest
     container_name: isaens-landing
     restart: unless-stopped
     ports:
-      - "8080:80"    # accede en http://tu-servidor:8080
-                     # si tienes Traefik/Nginx Proxy Manager cambia esto
-    labels:
-      # ── Etiquetas opcionales para Traefik (si lo usas) ──────────────
-      # - "traefik.enable=true"
-      # - "traefik.http.routers.isaens.rule=Host(`isaens.tudominio.com`)"
-      # - "traefik.http.routers.isaens.entrypoints=websecure"
-      # - "traefik.http.routers.isaens.tls.certresolver=letsencrypt"
+      - "8080:80"
