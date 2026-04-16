@@ -1,9 +1,11 @@
-version: "3.8"
-
 services:
   isaens-landing:
     image: ghcr.io/soporteasonaman/isaens-landing:latest
     container_name: isaens-landing
-    restart: unless-stopped
-    ports:
-      - "8100:80"
+    restart: always
+    networks:
+      - isaens-public
+
+networks:
+  isaens-public:
+    external: true
