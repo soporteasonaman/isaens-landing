@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aviso Legal y Condiciones de Uso del Validador On Line (V.O.L.) de ISAENS." />
+  <meta name="robots" content="noindex, follow" />
+  <title>Aviso Legal y Condiciones de Uso | ISAENS</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            teal: { 50:'#f0fafa', 100:'#d8f2f0', 200:'#b4e5e1', 400:'#77beb8', 500:'#5aa8a1', 600:'#44908a' },
+            navy: '#1a3a5c',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a202c; background: #fff; }
+
+    #navbar { background:#fff; border-bottom:1px solid #e8edf2; transition: box-shadow .3s; }
+    #navbar.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.08); }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #77beb8; color: #0d2a27; font-weight: 700;
+      padding: .75rem 1.75rem; border-radius: .5rem;
+      transition: background .2s, transform .2s;
+      font-size: .9375rem;
+    }
+    .btn-primary:hover { background: #5aa8a1; transform: translateY(-1px); }
+
+    .policy-section { margin-bottom: 2.5rem; }
+    .policy-section h2 {
+      font-size: 1.125rem; font-weight: 700; color: #1a3a5c;
+      margin-bottom: 1rem; padding-bottom: .5rem;
+      border-bottom: 2px solid #b4e5e1;
+    }
+    .policy-section h3 {
+      font-size: 1rem; font-weight: 600; color: #1a3a5c;
+      margin: 1.25rem 0 .5rem;
+    }
+    .policy-section p { color: #4a5568; line-height: 1.75; margin-bottom: .75rem; }
+    .policy-section ul { list-style: none; padding: 0; margin-bottom: .75rem; }
+    .policy-section ul li {
+      display: flex; align-items: flex-start; gap: .75rem;
+      color: #4a5568; line-height: 1.7; margin-bottom: .5rem;
+    }
+    .policy-section ul li::before {
+      content: ''; display: block; width: 6px; height: 6px;
+      border-radius: 50%; background: #77beb8;
+      margin-top: .55rem; flex-shrink: 0;
+    }
+    .policy-section strong { color: #1a202c; }
+    .policy-section a { color: #77beb8; text-decoration: underline; }
+    .policy-section a:hover { color: #5aa8a1; }
+
+    .highlight-box {
+      background: #f0fafa; border: 1px solid #b4e5e1;
+      border-radius: .75rem; padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+    .highlight-box p { margin: 0; color: #2d6a66; font-weight: 500; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between" style="height:80px;">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="logo.svg" alt="ISAENS" style="height:46px; width:auto;" />
+        </a>
+        <ul class="hidden md:flex items-center gap-8 text-[.9375rem] font-medium text-gray-500">
+          <li><a href="index.html#servicios" class="hover:text-teal-400 transition-colors duration-150">Servicios</a></li>
+          <li><a href="index.html#garantias" class="hover:text-teal-400 transition-colors duration-150">Garantías</a></li>
+          <li><a href="index.html#nosotros"  class="hover:text-teal-400 transition-colors duration-150">Nosotros</a></li>
+          <li><a href="index.html#faq"       class="hover:text-teal-400 transition-colors duration-150">FAQ</a></li>
+          <li><a href="index.html#contacto"  class="hover:text-teal-400 transition-colors duration-150">Contacto</a></li>
+        </ul>
+        <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary hidden md:inline-flex">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Validar ahora
+        </a>
+        <button id="hamburger" class="md:hidden text-gray-600 focus:outline-none" aria-label="Menú">
+          <svg id="ico-open"  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="ico-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mob-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-5 space-y-3 text-[.9375rem] font-medium text-gray-600">
+      <a href="index.html#servicios" class="block hover:text-teal-400" onclick="closeMob()">Servicios</a>
+      <a href="index.html#garantias" class="block hover:text-teal-400" onclick="closeMob()">Garantías</a>
+      <a href="index.html#nosotros"  class="block hover:text-teal-400" onclick="closeMob()">Nosotros</a>
+      <a href="index.html#faq"       class="block hover:text-teal-400" onclick="closeMob()">FAQ</a>
+      <a href="index.html#contacto"  class="block hover:text-teal-400" onclick="closeMob()">Contacto</a>
+      <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary block text-center mt-2">Validar ahora</a>
+    </div>
+  </nav>
+
+
+  <!-- CABECERA DE PÁGINA -->
+  <div style="padding-top:80px; background:#f7f9fc; border-bottom:1px solid #e8edf2;">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 py-14">
+      <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#77beb8;">Legal</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-navy mb-3">Aviso Legal y Condiciones de Uso</h1>
+      <p class="text-gray-500 text-sm">Última actualización: <strong class="text-gray-700">7 de abril de 2026</strong></p>
+    </div>
+  </div>
+
+
+  <!-- CONTENIDO -->
+  <main class="max-w-4xl mx-auto px-6 lg:px-10 py-16">
+
+    <div class="policy-section">
+      <p>Bienvenido/a a ISAENS. Te agradecemos que utilices nuestro servicio de validación de firma electrónica. Antes de utilizarlo, te pedimos que leas detenidamente las siguientes condiciones que regulan el uso de nuestro sitio web y del servicio "Validador On Line (V.O.L.)".</p>
+      <p>El mero acceso y/o utilización del Sitio Web y del servicio V.O.L. te atribuye la condición de Usuario e implica la aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en este documento desde el mismo momento en que accedes.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>I. Información General (Aviso Legal)</h2>
+      <p>En cumplimiento del deber de información dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), te facilitamos los siguientes datos de información general de este sitio web:</p>
+      <ul>
+        <li><strong>Titular:</strong> INTERNATIONAL SECURITY AND EMERGENCY NOTICE SERVICE, S.L. (en adelante, "ISAENS").</li>
+        <li><strong>NIF:</strong> B56569288</li>
+        <li><strong>Domicilio social:</strong> C/ Vicente Fuentes Sansano, nº37 A, C.P 03205 Elche - Alicante.</li>
+        <li><strong>Email de contacto:</strong> <a href="mailto:info@isaens.com">info@isaens.com</a></li>
+        <li><strong>Datos registrales:</strong> Nº de inscripción 1, tomo 4623, folio 54, sección, hoja 188277.</li>
+        <li><strong>Sitio Web:</strong> <a href="https://www.isaens.com" target="_blank" rel="noopener">www.isaens.com</a> (en adelante, el "Sitio Web").</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>II. Objeto y Condiciones de Uso del Servicio</h2>
+
+      <h3>1. ¿Qué es el "Validador On Line (V.O.L.)"?</h3>
+      <p>El V.O.L. es una herramienta online, de acceso libre y gratuito, que te permite realizar la validación técnica de documentos firmados electrónicamente. El servicio comprueba la integridad del documento, la validez de las firmas digitales y de los certificados electrónicos asociados, conforme a los estándares ETSI.</p>
+      <p>Para utilizar el Servicio, no necesitas registrarte. Simplemente accede a la herramienta en nuestro Sitio Web, sube o arrastra el documento que deseas validar y, en pocos segundos, el sistema te mostrará el resultado del análisis.</p>
+
+      <h3>2. Condición y Obligaciones del Usuario</h3>
+      <p>Como Usuario, al utilizar el V.O.L., asumes la responsabilidad de un uso correcto del Sitio Web y del Servicio. Esta responsabilidad se extenderá a:</p>
+      <ul>
+        <li>Hacer uso de este Sitio Web y del Servicio únicamente para realizar validaciones legalmente válidas y con fines lícitos.</li>
+        <li>Ser el único titular y/o tener los derechos necesarios sobre los documentos que subes a la plataforma para su validación.</li>
+        <li>No utilizar el Servicio para validar documentos con fines ilícitos o contrarios a la ley, la moral o el orden público.</li>
+        <li>No subir archivos que contengan malware, virus o cualquier código malicioso que pueda dañar el servicio.</li>
+        <li>No realizar un uso automatizado, masivo o abusivo que pueda afectar al rendimiento o la disponibilidad del servicio para otros usuarios.</li>
+      </ul>
+      <p>Declaras ser mayor de 18 años y tener capacidad legal para aceptar las presentes condiciones.</p>
+
+      <h3>3. Límites Técnicos del Servicio</h3>
+      <p>Para garantizar la calidad y disponibilidad del servicio gratuito, se establecen los siguientes límites técnicos:</p>
+      <ul>
+        <li><strong>Tamaño máximo de archivo:</strong> 50 MB.</li>
+        <li><strong>Límite de validaciones:</strong> 5 validaciones cada 15 minutos por dirección IP.</li>
+        <li><strong>Formatos aceptados:</strong> .pdf, .p7s, .p7m, .csig, .sig, .xml, .xsig, .json, .jose, .zip, .asice, .asics, .sce, .scs, .tsr, .tst.</li>
+      </ul>
+      <p>ISAENS se reserva el derecho de modificar estos límites para asegurar el buen funcionamiento de la plataforma.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>III. Propiedad Intelectual e Industrial</h2>
+      <p>ISAENS es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el mismo (software, marcas, logotipos, textos, estructura y diseño, etc.). Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública de la totalidad o parte de los contenidos de este Sitio Web con fines comerciales, sin la autorización expresa de ISAENS.</p>
+      <p>Tú, como Usuario, eres el único titular y responsable de los documentos que subes a la plataforma. Al subirlos, otorgas a ISAENS una licencia limitada, no exclusiva y revocable, únicamente con el fin de poder realizar la validación técnica solicitada. Dicha licencia se extingue automáticamente una vez finalizado el proceso de validación.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>IV. Exclusión de Garantías y Responsabilidad</h2>
+      <p>ISAENS actúa con la máxima diligencia para el correcto funcionamiento del Servicio. Sin embargo, dada su naturaleza gratuita y de acceso universal, no se responsabiliza de:</p>
+      <ul>
+        <li>El contenido, veracidad o legalidad de los documentos que los Usuarios suban a la plataforma.</li>
+        <li>El uso inadecuado que los Usuarios puedan hacer del Servicio o de la información de validación mostrada.</li>
+        <li>Las decisiones que los Usuarios tomen basándose en el resultado de la validación. El servicio de ISAENS se limita a realizar un <strong>análisis técnico</strong> de la firma electrónica en un momento concreto, y el resultado mostrado <strong>no constituye un dictamen legal</strong> sobre la validez o eficacia jurídica del documento o del acto que contiene.</li>
+        <li>Interrupciones del servicio por causas de fuerza mayor, mantenimiento técnico o fallos en la red de telecomunicaciones.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>V. Protección de Datos</h2>
+      <p>El servicio V.O.L. ha sido diseñado bajo el principio de <strong>minimización de datos y respeto a tu privacidad</strong>.</p>
+      <ul>
+        <li><strong>No se requiere registro:</strong> No te pedimos ni almacenamos datos personales identificativos (nombre, email, etc.) para usar el servicio.</li>
+        <li><strong>Tratamiento temporal de documentos:</strong> Los documentos que subes para validar se procesan de forma temporal en memoria y son <strong>eliminados automáticamente de nuestros sistemas</strong> una vez finalizado el proceso de validación. No guardamos copia de tus documentos.</li>
+        <li><strong>Informes de validación:</strong> Los informes o resultados generados se muestran en pantalla y se conservan temporalmente por un máximo de 7 días para permitir su consulta, pero no están asociados a ningún dato personal identificativo.</li>
+      </ul>
+      <p>Para más información sobre el tratamiento de datos de navegación, consulta nuestra <a href="privacidad.html">Política de Privacidad</a> y <a href="cookies.html">Política de Cookies</a>.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>VI. Legislación Aplicable y Jurisdicción</h2>
+      <p>La relación entre el Usuario e ISAENS se regirá por la normativa española vigente. Para cualquier controversia que pudiera derivarse de la interpretación o ejecución de las presentes condiciones, las partes se someten expresamente a la jurisdicción de los <strong>Juzgados y Tribunales de Elche (Alicante)</strong>, con renuncia a cualquier otro fuero que pudiera corresponderles.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>VII. Quejas y Reclamaciones</h2>
+      <p>Puedes hacernos llegar tus quejas o reclamaciones a través de nuestro correo electrónico de contacto: <a href="mailto:info@isaens.com">info@isaens.com</a>.</p>
+      <p>Además, si eres un consumidor, te informamos de que la Comisión Europea ha creado una plataforma de resolución de litigios en línea, de acuerdo con el Reglamento (UE) 524/2013. Puedes acceder a ella a través del siguiente enlace: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.</p>
+    </div>
+
+  </main>
+
+
+  <footer id="contacto" style="background:#080f1a; color:rgba(255,255,255,.55);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="inline-block mb-4">
+            <img src="logo.svg" alt="ISAENS" style="height:40px; width:auto;" class="brightness-0 invert" />
+          </a>
+          <p class="text-sm leading-relaxed mb-5">Prestador de Servicios Electrónicos de Confianza. Certeza jurídica para la economía digital.</p>
+          <div class="flex gap-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"
+               class="w-9 h-9 rounded-lg flex items-center justify-center transition-all"
+               style="background:rgba(255,255,255,.08);"
+               onmouseover="this.style.background='#77beb8';this.style.color='#0d2a27'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='inherit'">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicios -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://vol.isaens.com" target="_blank" rel="noopener" class="hover:text-white transition-colors">Validador On Line (V.O.L.)</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="aviso-legal.html" class="hover:text-white transition-colors" style="color:rgba(255,255,255,.85);">Aviso Legal y Condiciones de Uso</a></li>
+            <li><a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+            <li><a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest mb-4 text-white">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              <a href="mailto:info@isaens.com" class="hover:text-white transition-colors">info@isaens.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+              <a href="tel:800808111" class="hover:text-white transition-colors">800 808 111</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#77beb8;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              <span>C/ Vicente Fuentes Sansano, nº37 A<br/>C.P 03205 Elche — Alicante</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="color:rgba(255,255,255,.3);">
+        <p>&copy; <span id="year"></span> ISAENS. Todos los derechos reservados.</p>
+        <p>Prestador supervisado por el Ministerio para la Transformación Digital y de la Función Pública.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+
+    document.getElementById('hamburger').addEventListener('click', () => {
+      const menu  = document.getElementById('mob-menu');
+      const open  = document.getElementById('ico-open');
+      const close = document.getElementById('ico-close');
+      const visible = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', visible);
+      open.classList.toggle('hidden', !visible);
+      close.classList.toggle('hidden', visible);
+    });
+    function closeMob() {
+      document.getElementById('mob-menu').classList.add('hidden');
+      document.getElementById('ico-open').classList.remove('hidden');
+      document.getElementById('ico-close').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
