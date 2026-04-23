@@ -57,13 +57,14 @@
     .policy-section p { color: #4a5568; line-height: 1.75; margin-bottom: .75rem; }
     .policy-section ul { list-style: none; padding: 0; margin-bottom: .75rem; }
     .policy-section ul li {
-      display: flex; align-items: flex-start; gap: .75rem;
+      position: relative; padding-left: 1.25rem;
       color: #4a5568; line-height: 1.7; margin-bottom: .5rem;
     }
     .policy-section ul li::before {
-      content: ''; display: block; width: 6px; height: 6px;
+      content: ''; position: absolute;
+      left: 0; top: .65rem;
+      width: 6px; height: 6px;
       border-radius: 50%; background: #77beb8;
-      margin-top: .55rem; flex-shrink: 0;
     }
     .policy-section strong { color: #1a202c; }
     .policy-section a { color: #77beb8; text-decoration: underline; }
