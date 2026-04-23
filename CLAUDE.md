@@ -55,3 +55,5 @@ Producto principal: **V.O.L.** (Validador On Line de firmas electrónicas) — g
 - Usar `grep` para buscar en index.html en lugar de leerlo completo
 - Usar subagentes para tareas de exploración o investigación; informar al usuario cuando se lance uno
 - Objetivo: bajo consumo de tokens
+
+No pongas nunca el coauthored.
