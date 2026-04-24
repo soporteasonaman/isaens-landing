@@ -1,0 +1,134 @@
+Propuesta de Contenido para la Página Principal de ISAENS
+1. Sección de Inicio (Hero Section)
+•	(Título H1) ISAENS: Transformamos la Incertidumbre Digital en Certeza Jurídica
+•	(Subtítulo) En un entorno donde la autenticidad y seguridad de los documentos son fundamentales, te ofrecemos las herramientas para operar con total tranquilidad. Ten la certeza de que cada documento que gestionas está respaldado por un servicio fiable, seguro y legalmente sólido.
+•	(Llamadas a la Acción - CTA)
+○	Botón Principal: [ Comenzar a Validar ] (Enlazaría a la web del servicio V.O.L.)
+○	Botón Principal 2: [ Comenzar con los Sellos de tiempo] (Enlazaría a la web del servicio Sellos de tempo)
+○	Botón Secundario: [ Conocer Nuestros Servicios ] (Enlazaría a la sección de servicios más abajo)
+2. El Problema y la Solución (Empatía)
+2. El Problema y la Solución
+¿Tus documentos electrónicos son realmente fiables?
+En tu día a día profesional, gestionas decenas de documentos electrónicos: contratos, notificaciones, facturas, acuerdos... Pero, ¿cómo puedes estar seguro de su validez? ¿Y cómo puedes demostrar que un documento existía en un momento concreto y no ha sido alterado? La incertidumbre digital genera riesgos que tu negocio no puede permitirse.
+
+En ISAENS, convertimos esa incertidumbre en certeza jurídica a través de nuestros servicios de confianza, que responden a las preguntas fundamentales sobre la validez y la existencia de tus documentos:
+
+Para documentos que recibes firmados: Nuestro Validador On Line (V.O.L.) verifica:
+
+	¿Quién ha firmado? Comprobamos la identidad del firmante y la validez de su certificado digital.
+	¿El documento ha sido alterado? Verificamos la integridad del contenido, asegurando que no ha cambiado desde el momento de la firma.
+	¿La firma es válida? Confirmamos que el certificado estaba vigente y no revocado cuando se utilizó.
+
+Para documentos que necesitas proteger en el tiempo: Nuestro Servicio de Sellado de Tiempo certifica:
+
+	¿Cuándo existía este documento? Vinculamos tu archivo a una fecha y hora exactas e irrefutables, creando una prueba fehaciente de su existencia en un momento concreto.
+	¿Ha sido modificado desde entonces? El sello garantiza la integridad del documento, demostrando que no ha sufrido ninguna alteración desde que fue sellado.
+
+
+3. Resumen de Servicios
+•	(Título de la sección) Tecnología para dar Servicios Garantistas: Nuestras Soluciones
+•	(Introducción) Ponemos a tu disposición herramientas diseñadas para ofrecerte certeza y seguridad en tus operaciones diarias.
+•	(Servicio 1)
+	(Icono/Imagen representativa del V.O.L.)
+	Servicio de Validación de Firmas On Line: V.O.L.
+	Nuestra herramienta ágil e intuitiva que verifica automáticamente la autenticidad, integridad y validez legal de las firmas electrónicas en tus documentos. Obtén un informe de evidencias con valor probatorio reforzado en segundos.
+	Botón: [ Saber más sobre V.O.L. ] (Enlazaría a vol.isaens.com)
+•	(Servicio 2)
+	(Icono/Imagen representativa de Sellos de Tiempo)
+	Servicio de Sellos de Tiempo Certificados
+	Garantiza la existencia e integridad de tus documentos empresariales en un momento concreto. Un mecanismo certificado que vincula un archivo con una fecha y hora irrefutables, protegiéndote frente a litigios y manipulaciones.
+	Botón: [ Saber más sobre Sellos de Tiempo ] (Enlazaría a ts.isaens.com)
+4. Prueba Social (Autoridad)
+•	(Título de la sección) Tu Confianza, Legalmente Respaldada
+•	(Introducción) Elegir ISAENS es optar por las máximas garantías. Somos un Prestador de Servicios Electrónicos de Confianza supervisado por el Ministerio para la Transformación Digital y de la Función Pública en España. Esto significa para ti:
+•	(Listado de Garantías)
+
+	Supervisión y Control: Cumplimiento normativo continuo y riguroso garantizado por la autoridad competente.
+	Seguridad Técnica: Sistemas auditados externamente que cumplen con los más altos estándares de seguridad.
+	Responsabilidad Garantizada: Contamos con un seguro de responsabilidad civil de 1.500.000 € que respalda nuestras operaciones.
+	Validez Jurídica Reforzada: Los informes y evidencias que generan nuestros servicios gozan de un valor probatorio reforzado.
+	Cifra de éxito: Únete a más de 500 empresas que ya confían en ISAENS.
+5. "Sobre Nosotros" (Misión y Visión)
+•	(Título de la sección) Construyendo un Futuro Digital más Seguro
+•	(Nuestra Misión) Ofrecer soluciones integrales de confianza digital a empresas, corporaciones y entidades del sector público en toda Europa. Desarrollamos nuestras soluciones conforme al Reglamento eIDAS para asegurar los más altos estándares de eficacia operativa y respaldo legal.
+•	(Nuestra Visión) Consolidar un modelo de seguridad jurídica digital universalmente accesible. Aspiramos a ser referentes en el mercado de la certificación electrónica, contribuyendo activamente al desarrollo de una economía digital más segura, equitativa y transparente.
+6. Preguntas Frecuentes (FAQ)
+Sobre el Servicio V.O.L.
+1. ¿Qué es exactamente el Validador On Line (V.O.L.)? El V.O.L. es una herramienta online, ágil e intuitiva, que te permite verificar de forma automática la autenticidad, integridad y validez legal de las firmas electrónicas en tus documentos. En segundos, responde a tres preguntas clave:
+•	¿Quién ha firmado? Verificamos la identidad del firmante y la validez de su certificado digital.
+•	¿El documento ha sido alterado? Comprobamos que el contenido no ha cambiado desde el momento de la firma.
+•	¿La firma es válida? Confirmamos que el certificado no estaba caducado o revocado cuando se firmó.
+2. ¿Necesito tener conocimientos técnicos para usarlo? No, en absoluto. Hemos diseñado el V.O.L. para que la seguridad jurídica esté al alcance de todos. El proceso es tan sencillo como arrastrar y soltar el archivo que quieres validar. Sin instalaciones ni configuraciones complejas.
+3. ¿Para quién es útil el V.O.L.? Es una herramienta transversal, útil para cualquier profesional, empresa o particular que gestione documentación electrónica. Sus principales usuarios son:
+•	Asesorías de Empresas: Para garantizar la autenticidad de la documentación crítica de sus clientes (contratos, notificaciones de la AEAT, etc.).
+•	Despachos de Abogados: Para analizar pruebas documentales, preparar demandas con mayor solidez probatoria y asesorar a clientes.
+•	Empresas: Para proteger sus transacciones comerciales, validar contratos con proveedores y optimizar procesos de RRHH y compliance.
+•	Particulares: Para tener la tranquilidad de que los documentos importantes que firman o reciben (contratos de alquiler, servicios, compraventa) son auténticos y seguros.
+Seguridad y Confidencialidad
+4. ¿Qué pasa con mis documentos una vez los subo? ¿Se almacenan? Tu privacidad es nuestra máxima prioridad. Los documentos que subes no se almacenan en nuestros servidores. Se procesan temporalmente en memoria para realizar la validación y son eliminados automáticamente una vez finalizado el proceso.
+5. ¿Es seguro utilizar la plataforma? Sí. Como Prestador de Servicios de Confianza, la seguridad es el pilar de nuestro servicio. Implementamos múltiples medidas técnicas y organizativas para proteger tu información, entre las que se incluyen:
+•	Cifrado SSL/TLS (HTTPS) en todas las comunicaciones.
+•	Políticas de seguridad de contenido (CSP) y otros headers para prevenir ataques.
+•	Validación estricta de archivos para evitar la subida de contenido malicioso.
+•	Aislamiento de procesos mediante contenedores para reducir la superficie de ataque.
+El Informe de Evidencias
+6. ¿Qué es el Informe de Evidencias? Cada vez que validas un documento, generamos un Informe de Evidencias completo. Es un documento, firmado electrónicamente por ISAENS, que constituye una prueba robusta de la verificación realizada. Se estructura en dos partes:
+•	Resumen Certificado: Con la información esencial para una comprobación rápida (resultado global, firmante, fecha y hora).
+•	Reporte Detallado: Con un análisis técnico exhaustivo, fundamental para peritos o para fundamentar la validez de la prueba en un procedimiento judicial.
+7. ¿Qué valor legal tiene este informe? Al ser emitido por ISAENS como Prestador de Servicios de Confianza supervisado, el Informe de Evidencias goza de un valor probatorio reforzado. Esto significa que, en caso de litigio, simplifica la carga de la prueba, aportando una sólida presunción de veracidad sobre la validación realizada.
+Aspectos Técnicos y de Uso
+9. ¿Qué tipo de firmas y formatos de documento puedo validar? El V.O.L. ha sido diseñado para ofrecer la máxima compatibilidad.
+•	Estándares de firma soportados: PAdES, CAdES, XAdES, JAdES, ASiC y Timestamp (Sellos de Tiempo).
+•	Formatos de archivo aceptados: .pdf, .p7s, .p7m, .csig, .sig, .xml, .xsig, .json, .jose, .zip, .asice, .asics, .sce, .scs, .tsr, .tst.
+10. ¿Existen límites de uso en el servicio? Sí, para garantizar un servicio justo, eficiente y seguro para todos, existen las siguientes limitaciones técnicas:
+•	Tamaño máximo de archivo: 50 MB.
+•	Límite de validaciones: 5 validaciones cada 15 minutos por dirección IP.
+11. ¿Cuánto tiempo se guardan los informes de evidencias? Los informes de evidencias generados se conservan durante 7 días en tu área de usuario para que puedas descargarlos. Pasado ese plazo, son eliminados de forma automática.
+
+
+Servicio de Sellos de Tiempo
+
+Sobre el Servicio
+1. ¿Qué es exactamente un sello de tiempo digital? Un sello de tiempo digital es un mecanismo certificado que vincula un documento o archivo electrónico con una fecha y hora concretas e irrefutables. Actúa como una evidencia digital que demuestra que un documento existía en un momento determinado y que no ha sido modificado desde entonces, garantizando así su integridad y autenticidad.
+2. ¿Para qué sirve el servicio de sellado de tiempo de ISAENS? Nuestro servicio está diseñado para ofrecer una prueba legalmente válida de la existencia e integridad de tus documentos empresariales. Su principal finalidad es proteger tus derechos frente a posibles litigios, fraudes o manipulaciones de archivos electrónicos, proporcionando una herramienta sólida y confiable para la protección de tus activos digitales.
+3. ¿Quién puede beneficiarse de este servicio? El servicio está dirigido a un amplio abanico de usuarios, incluyendo:
+•	Sector Legal: Para documentar interacciones, aportar pruebas en procesos judiciales y certificar la fecha de contratos.
+•	Administraciones Públicas: Para fortalecer la transparencia y la trazabilidad de las comunicaciones oficiales.
+•	Ámbito Educativo: Para registrar comunicaciones clave entre docentes, estudiantes y tutores.
+•	Empresas y Corporaciones: Para asegurar la integridad de facturas, informes, políticas internas y cualquier otro documento crítico.
+•	Personas Físicas: Para proteger la autoría de obras, comunicaciones importantes o cualquier documento digital personal.
+
+Validez Legal y Técnica
+
+4. ¿El sello de tiempo de ISAENS tiene validez legal en España y Europa? Sí, sin ninguna duda. Nuestras soluciones se desarrollan en estricta conformidad con el Reglamento (UE) Nº 910/2014 (eIDAS), que es el marco legal que regula la identificación electrónica y los servicios de confianza en toda la Unión Europea. Esto asegura el máximo respaldo legal para los sellos de tiempo que emitimos.
+
+5. ¿Qué estándares técnicos sigue el servicio? Nuestro sistema de sellado de tiempo cumple con los estándares internacionales RFC 3161, garantizando la máxima seguridad, compatibilidad e interoperabilidad técnica.
+
+6. ¿Quién respalda la tecnología de ISAENS? Contamos con una sólida red de socios tecnológicos especializados en certificación digital. Colaboramos con entidades de prestigio como Fideicomiso EAD (Prestador Cualificado de Servicios Electrónicos de Confianza) y Uanataca (Autoridad de Sellado de Tiempo Certificado), y estamos registrados oficialmente como Prestador Cualificado ante el Ministerio de Asuntos Económicos y Transformación Digital.
+
+Uso y Ventajas
+
+7. ¿Es un proceso complicado o lento? Todo lo contrario. Nuestro sistema está optimizado para ser extremadamente rápido y eficiente. El tiempo promedio para generar un sello de tiempo es inferior a 3 segundos.
+
+8. ¿Qué ventajas ofrece ISAENS frente a otras soluciones? Elegir ISAENS te proporciona múltiples garantías:
+
+•	Rapidez: Sellado en menos de 3 segundos.
+•	Integración: Ofrecemos una API para integrar el servicio directamente en tus sistemas empresariales.
+•	Soporte: Dispones de soporte técnico especializado 24/7.
+•	Disponibilidad: Garantizamos una disponibilidad del servicio del 99,9%.
+•	Evidencia: Generamos certificados de autenticidad descargables para cada documento sellado.
+
+9. ¿Puedo integrar el sellado de tiempo en los sistemas de mi empresa? Sí. Ofrecemos una integración vía API que permite automatizar el proceso de sellado de tiempo directamente desde tus propias aplicaciones y sistemas de gestión empresarial, optimizando tus flujos de trabajo.
+7. Pie de Página (Footer)
+•	Datos de Contacto:
+○	Email: info@isaens.com
+○	Teléfono: [NÚMERO DE TELÉFONO]
+○	Dirección: C/ Vicente Fuentes Sansano, nº37 A, C.P 03205 Elche - Alicante
+•	Redes Sociales:
+○	[Enlace a LinkedIn]
+○	[Enlace a Twitter/X]
+•	Enlaces Legales:
+○	Aviso Legal
+○	Política de Privacidad
+○	Política de Cookies
+○	Condiciones de Contratación

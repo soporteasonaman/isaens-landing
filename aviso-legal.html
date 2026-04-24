@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
   <meta name="description" content="Aviso Legal y Condiciones de Uso del Validador On Line (V.O.L.) de ISAENS." />
   <meta name="robots" content="noindex, follow" />
   <title>Aviso Legal y Condiciones de Uso | ISAENS</title>
+
+  <script>/*<![CDATA[*/
+    (function(){try{var k='isaens-theme',v=localStorage.getItem(k);
+    if(v!=='light'&&v!=='dark'){v=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}
+    document.documentElement.setAttribute('data-theme',v);}catch(e){}})();
+  /*]]>*/</script>
+
+  <link rel="stylesheet" href="theme.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,13 +46,15 @@
     #navbar.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.08); }
 
     .btn-primary {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: #77beb8; color: #0d2a27; font-weight: 700;
-      padding: .75rem 1.75rem; border-radius: .5rem;
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      background: #066b66; color: #ffffff; font-weight: 700;
+      padding: .85rem 1.85rem; border-radius: .5rem;
+      min-height: 44px;
       transition: background .2s, transform .2s;
       font-size: .9375rem;
     }
-    .btn-primary:hover { background: #5aa8a1; transform: translateY(-1px); }
+    .btn-primary:hover,
+    .btn-primary:focus-visible { background: #044e4a; transform: translateY(-1px); }
 
     .policy-section { margin-bottom: 2.5rem; }
     .policy-section h2 {
@@ -53,80 +66,98 @@
       font-size: 1rem; font-weight: 600; color: #1a3a5c;
       margin: 1.25rem 0 .5rem;
     }
-    .policy-section p { color: #4a5568; line-height: 1.75; margin-bottom: .75rem; }
+    .policy-section p { color: #2d3748; line-height: 1.75; margin-bottom: .75rem; } /* AAA 11.6:1 */
     .policy-section ul { list-style: none; padding: 0; margin-bottom: .75rem; }
     .policy-section ul li {
       position: relative; padding-left: 1.25rem;
-      color: #4a5568; line-height: 1.7; margin-bottom: .5rem;
+      color: #2d3748; line-height: 1.7; margin-bottom: .5rem;
     }
     .policy-section ul li::before {
       content: ''; position: absolute;
       left: 0; top: .65rem;
       width: 6px; height: 6px;
-      border-radius: 50%; background: #77beb8;
+      border-radius: 50%; background: #066b66;
     }
-    .policy-section strong { color: #1a202c; }
-    .policy-section a { color: #77beb8; text-decoration: underline; }
-    .policy-section a:hover { color: #5aa8a1; }
+    .policy-section strong { color: #0b1220; }
+    .policy-section a { color: #066b66; text-decoration: underline; }
+    .policy-section a:hover,
+    .policy-section a:focus-visible { color: #044e4a; }
 
     .highlight-box {
       background: #f0fafa; border: 1px solid #b4e5e1;
       border-radius: .75rem; padding: 1.25rem 1.5rem;
       margin: 1rem 0;
     }
-    .highlight-box p { margin: 0; color: #2d6a66; font-weight: 500; }
+    .highlight-box p { margin: 0; color: #1a4c47; font-weight: 500; } /* AAA sobre #f0fafa */
+
+    /* Cookie accept */
+    #cookie-accept { background-color: #066b66; }
+    #cookie-accept:hover,
+    #cookie-accept:focus-visible { background-color: #1a3a5c; }
   </style>
 </head>
 
 <body class="antialiased">
 
+  <a href="#main" class="skip-link">Ir al contenido principal</a>
+
   <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+  <header>
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" aria-label="Navegación principal">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="flex items-center justify-between" style="height:80px;">
-        <a href="index.html" class="flex-shrink-0">
+        <a href="index.html" class="flex-shrink-0" aria-label="ISAENS — Inicio">
           <img src="logo.svg" alt="ISAENS" style="height:46px; width:auto;" />
         </a>
-        <ul class="hidden md:flex items-center gap-8 text-[.9375rem] font-medium text-gray-500">
-          <li><a href="index.html#servicios" class="hover:text-teal-400 transition-colors duration-150">Servicios</a></li>
-          <li><a href="index.html#garantias" class="hover:text-teal-400 transition-colors duration-150">Garantías</a></li>
-          <li><a href="index.html#nosotros"  class="hover:text-teal-400 transition-colors duration-150">Nosotros</a></li>
-          <li><a href="index.html#faq"       class="hover:text-teal-400 transition-colors duration-150">FAQ</a></li>
-          <li><a href="index.html#contacto"  class="hover:text-teal-400 transition-colors duration-150">Contacto</a></li>
+        <ul class="hidden md:flex items-center gap-8 text-[.9375rem] font-medium text-gray-700">
+          <li><a href="index.html#servicios" class="hover:text-teal-600 transition-colors duration-150">Servicios</a></li>
+          <li><a href="index.html#garantias" class="hover:text-teal-600 transition-colors duration-150">Garantías</a></li>
+          <li><a href="index.html#nosotros"  class="hover:text-teal-600 transition-colors duration-150">Nosotros</a></li>
+          <li><a href="index.html#faq"       class="hover:text-teal-600 transition-colors duration-150">FAQ</a></li>
+          <li><a href="index.html#contacto"  class="hover:text-teal-600 transition-colors duration-150">Contacto</a></li>
         </ul>
-        <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary hidden md:inline-flex">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Validar ahora
-        </a>
-        <button id="hamburger" class="md:hidden text-gray-600 focus:outline-none" aria-label="Menú">
-          <svg id="ico-open"  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="ico-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+        <div class="flex items-center gap-3">
+          <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro (Alt+T)">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary hidden md:inline-flex">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Validar ahora
+          </a>
+          <button id="hamburger" type="button" class="md:hidden text-gray-700 inline-flex items-center justify-center"
+                  style="width:44px; height:44px; border-radius:8px;"
+                  aria-label="Abrir menú de navegación" aria-controls="mob-menu" aria-expanded="false">
+            <svg id="ico-open"  class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="ico-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
       </div>
     </div>
-    <div id="mob-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-5 space-y-3 text-[.9375rem] font-medium text-gray-600">
-      <a href="index.html#servicios" class="block hover:text-teal-400" onclick="closeMob()">Servicios</a>
-      <a href="index.html#garantias" class="block hover:text-teal-400" onclick="closeMob()">Garantías</a>
-      <a href="index.html#nosotros"  class="block hover:text-teal-400" onclick="closeMob()">Nosotros</a>
-      <a href="index.html#faq"       class="block hover:text-teal-400" onclick="closeMob()">FAQ</a>
-      <a href="index.html#contacto"  class="block hover:text-teal-400" onclick="closeMob()">Contacto</a>
+    <div id="mob-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-5 space-y-3 text-[.9375rem] font-medium text-gray-700">
+      <a href="index.html#servicios" class="block py-2 hover:text-teal-600" onclick="closeMob()">Servicios</a>
+      <a href="index.html#garantias" class="block py-2 hover:text-teal-600" onclick="closeMob()">Garantías</a>
+      <a href="index.html#nosotros"  class="block py-2 hover:text-teal-600" onclick="closeMob()">Nosotros</a>
+      <a href="index.html#faq"       class="block py-2 hover:text-teal-600" onclick="closeMob()">FAQ</a>
+      <a href="index.html#contacto"  class="block py-2 hover:text-teal-600" onclick="closeMob()">Contacto</a>
       <a href="https://vol.isaens.com" target="_blank" rel="noopener" class="btn-primary block text-center mt-2">Validar ahora</a>
     </div>
   </nav>
+  </header>
 
 
   <!-- CABECERA DE PÁGINA -->
   <div style="padding-top:80px; background:#f7f9fc; border-bottom:1px solid #e8edf2;">
     <div class="max-w-4xl mx-auto px-6 lg:px-10 py-14">
-      <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#77beb8;">Legal</p>
+      <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#066b66;">Legal</p>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-navy mb-3">Aviso Legal y Condiciones de Uso</h1>
-      <p class="text-gray-500 text-sm">Última actualización: <strong class="text-gray-700">7 de abril de 2026</strong></p>
+      <p class="text-gray-700 text-sm">Última actualización: <strong class="text-gray-900">7 de abril de 2026</strong></p>
     </div>
   </div>
 
 
   <!-- CONTENIDO -->
-  <main class="max-w-4xl mx-auto px-6 lg:px-10 py-16">
+  <main id="main" class="max-w-4xl mx-auto px-6 lg:px-10 py-16">
 
     <div class="policy-section">
       <p>Bienvenido/a a ISAENS. Te agradecemos que utilices nuestro servicio de validación de firma electrónica. Antes de utilizarlo, te pedimos que leas detenidamente las siguientes condiciones que regulan el uso de nuestro sitio web y del servicio "Validador On Line (V.O.L.)".</p>
@@ -216,7 +247,7 @@
   </main>
 
 
-  <footer id="contacto" style="background:#080f1a; color:rgba(255,255,255,.55);">
+  <footer id="contacto" style="background:#080f1a; color:rgba(255,255,255,.92);">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -270,37 +301,71 @@
       </div>
     </div>
 
-    <div style="border-top:1px solid rgba(255,255,255,.06);">
-      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="color:rgba(255,255,255,.3);">
+    <div style="border-top:1px solid rgba(255,255,255,.12);">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style="color:rgba(255,255,255,.82);">
         <p>&copy; <span id="year"></span> ISAENS. Todos los derechos reservados.</p>
-        <p></p>
+
+        <nav class="a11y-badges" aria-label="Badges de conformidad W3C">
+          <a href="https://www.w3.org/WAI/WCAG22/quickref/?currentsidebar=%23col_overview&amp;levels=aaa"
+             target="_blank" rel="noopener" class="badge-wcag"
+             title="Conforme WCAG 2.2 Nivel AAA">
+            <img src="Wcag2.2AAA.svg" alt="Conforme con las Pautas de Accesibilidad para el Contenido Web WCAG 2.2 Nivel AAA" />
+          </a>
+          <a href="https://validator.w3.org/check?uri=referer"
+             target="_blank" rel="noopener"
+             title="Valid XHTML 1.1">
+            <img src="Valid_XHTML_1.1.svg" alt="Valid XHTML 1.1" />
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer"
+             target="_blank" rel="noopener"
+             title="Valid CSS">
+            <img src="Valid_CSS.svg" alt="Valid CSS" />
+          </a>
+        </nav>
       </div>
     </div>
   </footer>
 
 
 
-  <script>
+  <script>/*<![CDATA[*/
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+    var nav = document.getElementById('navbar');
+    window.addEventListener('scroll', function () { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
-    document.getElementById('hamburger').addEventListener('click', () => {
-      const menu  = document.getElementById('mob-menu');
-      const open  = document.getElementById('ico-open');
-      const close = document.getElementById('ico-close');
-      const visible = !menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', visible);
-      open.classList.toggle('hidden', !visible);
-      close.classList.toggle('hidden', visible);
-    });
+    var hamburger = document.getElementById('hamburger');
+    var mobMenu   = document.getElementById('mob-menu');
+
+    function openMob() {
+      mobMenu.classList.remove('hidden');
+      document.getElementById('ico-open').classList.add('hidden');
+      document.getElementById('ico-close').classList.remove('hidden');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Cerrar menú de navegación');
+      var firstLink = mobMenu.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
     function closeMob() {
-      document.getElementById('mob-menu').classList.add('hidden');
+      mobMenu.classList.add('hidden');
       document.getElementById('ico-open').classList.remove('hidden');
       document.getElementById('ico-close').classList.add('hidden');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
     }
-  </script>
+    hamburger.addEventListener('click', function () {
+      if (mobMenu.classList.contains('hidden')) openMob();
+      else { closeMob(); hamburger.focus(); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !mobMenu.classList.contains('hidden')) {
+        closeMob();
+        hamburger.focus();
+      }
+    });
+  /*]]>*/</script>
+
+  <script src="theme-toggle.js" defer="defer"></script>
 
 </body>
 </html>

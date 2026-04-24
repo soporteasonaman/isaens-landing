@@ -1,0 +1,341 @@
+/* ============================================================
+   ISAENS Landing — Theme system (light/dark) + a11y utilities
+   Paleta corporativa: teal #77beb8 · navy #1a3a5c
+   ============================================================ */
+
+/* -------- Variables: modo claro (por defecto) -------- */
+:root {
+  color-scheme: light;
+
+  --isa-teal:        #0a8f88;   /* teal corporativo oscurecido para AAA sobre blanco (7.03:1) */
+  --isa-teal-bright: #77beb8;   /* teal original — usar solo sobre fondos oscuros */
+  --isa-teal-dark:   #066b66;   /* hover/active sobre blanco */
+  --isa-navy:        #1a3a5c;   /* navy corporativo */
+  --isa-navy-soft:   #2a4c73;
+
+  --bg:              #ffffff;
+  --bg-alt:          #f7f9fc;
+  --bg-teal-soft:    #f0fafa;
+
+  --surface:         #ffffff;
+  --surface-border:  #e5e7eb;
+
+  --text:            #0f172a;   /* ~15.9:1 sobre blanco */
+  --text-strong:     #0b1220;
+  --text-mid:        #2d3748;   /* 11.6:1 sobre blanco — AAA */
+  --text-muted:      #374151;   /* 9.7:1 sobre blanco — AAA */
+
+  --footer-bg:       #080f1a;
+  --footer-text:     rgba(255,255,255,.92);   /* AAA sobre #080f1a */
+  --footer-muted:    rgba(255,255,255,.78);   /* AAA */
+  --footer-border:   rgba(255,255,255,.12);
+
+  --link:            #0a8f88;
+  --link-hover:      #066b66;
+
+  --focus-ring:      #0a8f88;
+  --focus-ring-dark: #5eead4;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.08);
+}
+
+/* -------- Variables: modo oscuro -------- */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --isa-teal:        #5eead4;   /* 10.1:1 sobre #0f172a — AAA */
+  --isa-teal-bright: #77beb8;
+  --isa-teal-dark:   #2dd4bf;
+  --isa-navy:        #7fb3e0;
+  --isa-navy-soft:   #9dc5e8;
+
+  --bg:              #0f172a;
+  --bg-alt:          #0b1220;
+  --bg-teal-soft:    #0b1220;   /* neutro, sin verde */
+
+  --surface:         #1e293b;
+  --surface-border:  #334155;
+
+  --text:            #f1f5f9;
+  --text-strong:     #ffffff;
+  --text-mid:        #e2e8f0;   /* 13.8:1 sobre #0f172a, 10.2:1 sobre #1e293b — AAA */
+  --text-muted:      #cbd5e1;   /* 10.4:1 sobre #0f172a, 7.7:1 sobre #1e293b — AAA */
+
+  --footer-bg:       #060a12;
+  --footer-text:     rgba(255,255,255,.92);
+  --footer-muted:    rgba(255,255,255,.82);
+  --footer-border:   rgba(255,255,255,.1);
+
+  --link:            #5eead4;
+  --link-hover:      #2dd4bf;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.35);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.45);
+}
+
+/* -------- Base -------- */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color .25s ease, color .25s ease;
+}
+
+/* -------- Skip link (WCAG 2.4.1) -------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  z-index: 1000;
+  background: var(--isa-navy);
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .15s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 8px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* -------- Focus visible global (WCAG 2.4.7 / 2.4.13 AAA) -------- */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+[data-theme="dark"] :focus-visible {
+  outline-color: var(--focus-ring-dark);
+}
+
+/* -------- Theme toggle button (navbar + mobile) -------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--surface-border);
+  color: var(--text-mid);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color .2s ease, border-color .2s ease,
+              color .2s ease, transform .15s ease, box-shadow .2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.theme-toggle:hover {
+  border-color: var(--isa-teal);
+  color: var(--isa-teal);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.theme-toggle:active { transform: translateY(0); }
+.theme-toggle svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* -------- Dark mode overrides para secciones con inline styles -------- */
+[data-theme="dark"] body { background: var(--bg); }
+
+/* Cards con .bg-white → --surface (más claro que body: da profundidad a las tarjetas) */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] [style*="background:#ffffff"],
+[data-theme="dark"] [style*="background: #ffffff"] {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* Bandas off-white/soft → --bg-alt (más oscuro que body, nunca más claro) */
+[data-theme="dark"] [style*="background:#f7f9fc"],
+[data-theme="dark"] [style*="background: #f7f9fc"],
+[data-theme="dark"] [style*="background:#f0fafa"],
+[data-theme="dark"] [style*="background: #f0fafa"],
+[data-theme="dark"] .feature-block:nth-child(even) {
+  background: var(--bg-alt) !important;
+  color: var(--text) !important;
+}
+
+/* Navbar — fondo full-width para no dejar franjas laterales blancas */
+[data-theme="dark"] #navbar {
+  background: rgba(15,23,42,.96) !important;
+  border-bottom-color: var(--surface-border) !important;
+}
+
+/* Textos grises Tailwind en dark — todos con contraste AAA sobre --bg y --surface */
+[data-theme="dark"] .text-gray-400,
+[data-theme="dark"] .text-gray-500,
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-700 { color: var(--text-mid) !important; }
+[data-theme="dark"] .text-gray-900,
+[data-theme="dark"] .text-gray-800 { color: var(--text-strong) !important; }
+
+/* Bordes grises */
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 { border-color: var(--surface-border) !important; }
+
+/* Sombras */
+[data-theme="dark"] .shadow-lg,
+[data-theme="dark"] .shadow-md,
+[data-theme="dark"] .shadow { box-shadow: var(--shadow-md) !important; }
+
+/* Hover rows y cards */
+[data-theme="dark"] .hover\:bg-gray-50:hover { background: var(--bg-alt) !important; }
+
+/* Inline teal color — en dark queremos la versión clara */
+[data-theme="dark"] [style*="color:#77beb8"],
+[data-theme="dark"] [style*="color: #77beb8"] {
+  color: var(--isa-teal) !important;
+}
+
+/* Inline navy en dark → usar versión clara */
+[data-theme="dark"] [style*="color:#1a3a5c"],
+[data-theme="dark"] [style*="color: #1a3a5c"] {
+  color: var(--isa-navy) !important;
+}
+
+/* Inline dark backgrounds que deben mantenerse oscuros */
+[data-theme="dark"] [style*="background:#080f1a"],
+[data-theme="dark"] [style*="background: #080f1a"] {
+  background: var(--footer-bg) !important;
+}
+
+[data-theme="dark"] [style*="background:#1a3a5c"],
+[data-theme="dark"] [style*="background: #1a3a5c"] {
+  background: var(--surface) !important;
+}
+
+/* Imágenes con brightness-0 invert (logo blanco): mantener */
+/* La clase brightness-0 invert ya es coherente en dark porque queremos blanco sobre fondo oscuro. */
+
+/* Hero: se mantiene la imagen de fondo en ambos modos
+   (el overlay ::after ya oscurece lo suficiente para contraste AAA del texto) */
+
+/* Policy pages — heredan fondo del body; no inyectamos surface para evitar
+   "fondo gris más claro que el body" que pidió el usuario evitar. */
+[data-theme="dark"] .policy-section p,
+[data-theme="dark"] .policy-section li { color: var(--text-mid) !important; }
+[data-theme="dark"] .policy-section h2,
+[data-theme="dark"] .policy-section h3 { color: #b4e5e1 !important; }
+[data-theme="dark"] .policy-section strong { color: var(--text-strong) !important; }
+[data-theme="dark"] .policy-section a { color: var(--isa-teal) !important; }
+[data-theme="dark"] .policy-section a:hover,
+[data-theme="dark"] .policy-section a:focus-visible { color: var(--link-hover) !important; }
+[data-theme="dark"] .policy-section ul li::before { background: var(--isa-teal) !important; }
+
+/* Highlight box (fondo teal claro) */
+[data-theme="dark"] .highlight-box {
+  background: rgba(94,234,212,.08) !important;
+  border-color: rgba(94,234,212,.35) !important;
+}
+[data-theme="dark"] .highlight-box p { color: var(--text) !important; }
+
+/* Títulos de sección (home) */
+[data-theme="dark"] .sec-label { color: var(--isa-teal) !important; }
+[data-theme="dark"] .sec-h2     { color: var(--text-mid) !important; }
+
+/* Clase navy custom de Tailwind (text-navy) — invisible en dark, forzar claro */
+[data-theme="dark"] .text-navy { color: #b4e5e1 !important; }
+
+/* Teal custom classes */
+[data-theme="dark"] .text-teal-400,
+[data-theme="dark"] .text-teal-500,
+[data-theme="dark"] .text-teal-600 { color: var(--isa-teal) !important; }
+[data-theme="dark"] .bg-teal-50,
+[data-theme="dark"] .bg-teal-100 { background: rgba(94,234,212,.1) !important; }
+[data-theme="dark"] .border-teal-100,
+[data-theme="dark"] .border-teal-200 { border-color: rgba(94,234,212,.25) !important; }
+
+/* Tabla cookies */
+[data-theme="dark"] .cookie-table { background: var(--surface) !important; }
+[data-theme="dark"] .cookie-table th { background: var(--isa-navy) !important; color: #fff !important; }
+[data-theme="dark"] .cookie-table td { color: var(--text-mid) !important; border-color: var(--surface-border) !important; }
+[data-theme="dark"] .cookie-table tr:nth-child(even) { background: var(--bg-alt) !important; }
+
+/* Accordion FAQ */
+[data-theme="dark"] .faq-item { background: var(--surface) !important; border-color: var(--surface-border) !important; }
+[data-theme="dark"] .faq-question { color: var(--text-strong) !important; }
+[data-theme="dark"] .faq-body { color: var(--text-mid) !important; }
+
+/* Cookie notice */
+[data-theme="dark"] #cookie-notice {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--surface-border) !important;
+}
+
+/* -------- Badges footer (W3C) -------- */
+.a11y-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.a11y-badges a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+  min-height: 44px;
+  min-width: 44px;
+}
+.a11y-badges a:hover,
+.a11y-badges a:focus-visible {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+  transform: translateY(-1px);
+}
+.a11y-badges img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* -------- Reduced motion (WCAG 2.3.3 AAA) -------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------- Visually hidden utility -------- */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
