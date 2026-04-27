@@ -1,0 +1,310 @@
+This tab shows accessibility issues, indicating problems for older users, people with disabilities or accessibility needs. Automated testing cannot detect all accessibility issues, so should be used alongside human testing.
+
+Level	WCAG 2.1	Section 508 - 2017	Key
+A	Level A, 1 issues	Level A, 1 issues	Critical Pages with level A issues are unusable for some people
+AA	Level AA, 2 issues	Level AA, 2 issues	Very Important Pages with level AA issues are very difficult to use
+AAA	Level AAA, 3 issues		Less Important Pages with level AAA issues can be difficult to use
+Priority	Description and URL	Guideline and Line Number	Count
+Level A
+1 issues on 1 pages
+
+Critical	The visual label must appear in the accessible name of links and controls.	WCAG 2.1 A F96 Section 508 (2017) A F96	1 pages
+People who use speech control rely on being able to select elements using the visual label displayed on screen. If this isn't part of the accessible name, they can't select elements by name.	2.5.3	
+Label "Descubre más" not in name "Ir a la siguiente sección"
+<a href='#problema' class='absolute bottom-4 ...' style='color:#ffffff; ...' aria-label='Ir a la siguiente sección'>...</a>
+Line 281	
+https://isaens.com/
+
+Level AA
+2 issues on 3 pages
+
+Very Important	Ensure that text and background colors have enough contrast.	WCAG 2.1 AA 1.4.3 Section 508 (2017) AA 1.4.3	3 pages
+Some users find it hard to read light gray text on a white background, dark gray text on a black background and white text on a red background.
+
+The contrast ratio should be 3.0 or more for 18 point text, or larger
+The contrast ratio should be 3.0 or more for 14 point bold text, or larger
+The contrast ratio should be 4.5 or more for all other text
+1.4.6	
+The text color to background color contrast ratio after composition is:		
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='hover:text-white ...'>Validador On Line (V.O.L.)</a>
+Line 268	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='aviso-legal.html' class='hover:text-white ...'>Aviso ... de Uso</a>
+Line 276	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='privacidad.html' class='hover:text-white ...'>...d</a>
+Line 277	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='cookies.html' class='hover:text-white ...'>Política de Cookies</a>
+Line 278	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='mailto:info@isaens.com' class='hover:text-white ...'>...m</a>
+Line 288	
+https://isaens.com/aviso-legal.html
+
+The text color to background color contrast ratio after composition is:		
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='hover:text-white ...'>Validador On Line (V.O.L.)</a>
+Line 296	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='aviso-legal.html' class='hover:text-white ...'>Aviso ... de Uso</a>
+Line 304	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='privacidad.html' class='hover:text-white ...'>...d</a>
+Line 305	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='cookies.html' class='hover:text-white ...'>Política de Cookies</a>
+Line 306	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='mailto:info@isaens.com' class='hover:text-white ...'>...m</a>
+Line 316	
+https://isaens.com/cookies.html
+
+The text color to background color contrast ratio after composition is:		
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='hover:text-white ...'>Validador On Line (V.O.L.)</a>
+Line 317	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='aviso-legal.html' class='hover:text-white ...'>Aviso ... de Uso</a>
+Line 325	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='privacidad.html' class='hover:text-white ...'>...d</a>
+Line 326	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='cookies.html' class='hover:text-white ...'>Política de Cookies</a>
+Line 327	
+2.04 with color:  rgb(0,0,238)background:  rgb(8,15,26)
+font-size: 12ptfont-weight: 400
+<a href='mailto:info@isaens.com' class='hover:text-white ...'>...m</a>
+Line 337	
+https://isaens.com/privacidad.html
+
+Very Important	If you set any of the colors on the body or a elements you must set all of them.	WCAG 2.1 AA F24 Section 508 (2017) AA F24	3 pages
+In HTML the color attributes are text, bgcolor, link, alink and vlink. In CSS the attributes are color and background-color. Some users have browser defaults set to white text on a black background, so setting one color without setting the others can result in white text on a white background.	1.4.3 1.4.6 1.4.8	
+The colors used are:		
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from aviso-legal.html
+<a href='index.html#servicios' class='hover:text-teal-600 ...'>Servicios</a>
+Line 113	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from aviso-legal.html
+<a href='index.html#garantias' class='hover:text-teal-600 ...'>Garantías</a>
+Line 114	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from aviso-legal.html
+<a href='index.html#nosotros' class='hover:text-teal-600 ...'>Nosotros</a>
+Line 115	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from aviso-legal.html
+<a href='index.html#faq' class='hover:text-teal-600 ...'>FAQ</a>
+Line 116	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from aviso-legal.html
+<a href='index.html#contacto' class='hover:text-teal-600 ...'>Contacto</a>
+Line 117	
+https://isaens.com/aviso-legal.html
+
+The colors used are:		
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from cookies.html
+<a href='index.html#servicios' class='hover:text-teal-600 ...'>Servicios</a>
+Line 124	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from cookies.html
+<a href='index.html#garantias' class='hover:text-teal-600 ...'>Garantías</a>
+Line 125	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from cookies.html
+<a href='index.html#nosotros' class='hover:text-teal-600 ...'>Nosotros</a>
+Line 126	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from cookies.html
+<a href='index.html#faq' class='hover:text-teal-600 ...'>FAQ</a>
+Line 127	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from cookies.html
+<a href='index.html#contacto' class='hover:text-teal-600 ...'>Contacto</a>
+Line 128	
+https://isaens.com/cookies.html
+
+The colors used are:		
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from privacidad.html
+<a href='index.html#servicios' class='hover:text-teal-600 ...'>Servicios</a>
+Line 113	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from privacidad.html
+<a href='index.html#garantias' class='hover:text-teal-600 ...'>Garantías</a>
+Line 114	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from privacidad.html
+<a href='index.html#nosotros' class='hover:text-teal-600 ...'>Nosotros</a>
+Line 115	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from privacidad.html
+<a href='index.html#faq' class='hover:text-teal-600 ...'>FAQ</a>
+Line 116	
+color:  rgb(0,0,238) from browser settings
+background:  rgb(255,255,255) from privacidad.html
+<a href='index.html#contacto' class='hover:text-teal-600 ...'>Contacto</a>
+Line 117	
+https://isaens.com/privacidad.html
+
+Level AAA
+3 issues on 4 pages
+
+Important	Avoid specifying a new window as the target of a link with target=_blank.	WCAG 2.1 AAA F22	4 pages
+Displaying new windows without warning can be very confusing to non-sighted and mobile users. Some screen readers and mobile devices give very little indication a new tab or window has opened. If you cannot avoid displaying a new window, insert an "opens in a new window" warning into the link text or add the warning to the link using a title attribute or aria-describedby attribute.	3.2.5	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 208	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary'>...</a>
+Line 260	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary'>Empezar a Validar Gratis...</a>
+Line 397	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary'>...</a>
+Line 446	
+<a href='...f' target='_blank' rel='noopener' class='inline-flex ...' style='color:#77beb8;'>...</a>
+Line 488	
+https://isaens.com/
+
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 124	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 143	
+<a href='https://www.isaens.com' target='_blank' rel='noopener'>...m</a>
+Line 176	
+<a href='...s' target='_blank' rel='noopener'>...s</a>
+Line 244	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='hover:text-white ...'>Validador On Line (V.O.L.)</a>
+Line 268	
+https://isaens.com/aviso-legal.html
+
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 135	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 154	
+<a href='https://www.isaens.com' target='_blank' rel='noopener'>...m</a>
+Line 175	
+<a href='...7' target='_blank' rel='noopener'>Instrucciones aquí</a>
+Line 254	
+<a href='...s' target='_blank' rel='noopener'>Instrucciones aquí</a>
+Line 255	
+https://isaens.com/cookies.html
+
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 124	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 143	
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='hover:text-white ...'>Validador On Line (V.O.L.)</a>
+Line 317	
+<a href='...a' target='_blank' rel='noopener' class='badge-wcag' title='Conforme WCAG 2.2 Nivel AAA'>...</a>
+Line 360	
+<a href='...r' target='_blank' rel='noopener' title='Valid XHTML 1.1'>...</a>
+Line 365	
+https://isaens.com/privacidad.html
+
+Important	Ensure that text and background colors have a 7:1 contrast ratio.	WCAG 2.1 AAA 1.4.6	4 pages
+Some users find it hard to read light gray text on a white background, dark gray text on a black background and white text on a red background.
+
+The contrast ratio should be 4.5 or more for 18 point text, or larger
+The contrast ratio should be 4.5 or more for 14 point bold text, or larger
+The contrast ratio should be 7.0 or more for all other text
+The text color to background color contrast ratio after composition is:		
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary'>...</a>
+Line 260	
+https://isaens.com/
+
+The text color to background color contrast ratio after composition is:		
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 124	
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 143	
+6.03 with color:  rgb(6,107,102)background:  rgb(247,249,252)
+font-size: 12ptfont-weight: 400
+<p class='text-xs font-bold ...' style='color:#066b66;'>Legal</p>
+Line 152	
+6.36 with color:  rgb(6,107,102)background:  rgb(255,255,255)
+font-size: 12ptfont-weight: 400
+<a href='privacidad.html'>Política de Privacidad</a>
+Line 233	
+6.36 with color:  rgb(6,107,102)background:  rgb(255,255,255)
+font-size: 12ptfont-weight: 400
+<a href='cookies.html'>Política de Cookies</a>
+Line 233	
+https://isaens.com/aviso-legal.html
+
+The text color to background color contrast ratio after composition is:		
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 135	
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 154	
+6.03 with color:  rgb(6,107,102)background:  rgb(247,249,252)
+font-size: 12ptfont-weight: 400
+<p class='text-xs font-bold ...' style='color:#066b66;'>Legal</p>
+Line 163	
+6.36 with color:  rgb(6,107,102)background:  rgb(255,255,255)
+font-size: 12ptfont-weight: 400
+<a href='https://www.isaens.com' target='_blank' rel='noopener'>...m</a>
+Line 175	
+6.36 with color:  rgb(6,107,102)background:  rgb(255,255,255)
+font-size: 12ptfont-weight: 400
+<a href='privacidad.html'>Política de Privacidad</a>
+Line 268	
+https://isaens.com/cookies.html
+
+The text color to background color contrast ratio after composition is:		
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary hidden ...'>...</a>
+Line 124	
+6.36 with color:  rgb(255,255,255)background:  rgb(6,107,102)
+font-size: 11.25ptfont-weight: 700
+<a href='https://vol.isaens.com' target='_blank' rel='noopener' class='btn-primary block ...'>Validar ahora</a>
+Line 143	
+6.03 with color:  rgb(6,107,102)background:  rgb(247,249,252)
+font-size: 12ptfont-weight: 400
+<p class='text-xs font-bold ...' style='color:#066b66;'>Legal</p>
+Line 152	
+6.36 with color:  rgb(6,107,102)background:  rgb(255,255,255)
+font-size: 12ptfont-weight: 400
+<a href='cookies.html'>Política de Cookies</a>
+Line 216	
+5.98 with color:  rgb(6,107,102)background:  rgb(240,250,250)
+font-size: 12ptfont-weight: 500
+<a href='mailto:dpo@isaens.com'>dpo@isaens.com</a>
+Line 252	
+https://isaens.com/privacidad.html
+
+Important	Several links on a page share the same link text, but go to different destinations.	WCAG 2.1 AAA 2.4.9	1 pages
+Make the link text unique for each target, or add additional text using aria-label.		
+Link text: Instrucciones aquí	Line 254	
+Link text: Instrucciones aquí	Line 255	
+Link text: Instrucciones aquí	Line 256	
+Link text: Instrucciones aquí	Line 257	
+https://isaens.com/cookies.html
+
