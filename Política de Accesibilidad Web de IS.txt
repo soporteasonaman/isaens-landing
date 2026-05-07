@@ -1,0 +1,36 @@
+Política de Accesibilidad Web de ISAENS
+En INTERNATIONAL SECURITY AND EMERGENCY NOTICE SERVICE, S.L. (en adelante, "ISAENS"), nos hemos comprometido a hacer nuestro sitio web accesible para el mayor número de personas posible, independientemente de sus capacidades personales o tecnológicas. Creemos firmemente en el derecho a la igualdad de oportunidades y la no discriminación, y trabajamos para que nuestra plataforma digital sea un espacio inclusivo para todas las personas.
+Esta política de accesibilidad se ha desarrollado en cumplimiento de la legislación vigente y con el objetivo de eliminar las barreras que puedan dificultar el acceso a la información y los servicios que ofrecemos.
+Estado de Cumplimiento
+Este sitio web ha sido diseñado y revisado para ajustarse a las directrices y normativas actuales en materia de accesibilidad. Concretamente, se ha tomado como referencia el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, aplicable por extensión a entidades privadas que prestan servicios de interés público.
+Actualmente, el sitio web de ISAENS está trabajando en los requisitos de accesibilidad, y nuestro objetivo es alcanzar el máximo nivel de cumplimiento posible. Nos esforzamos por seguir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 del Consorcio World Wide Web (W3C), aspirando a un nivel de conformidad AAA.
+Medidas Implementadas para Mejorar la Accesibilidad
+Para facilitar la navegación y el acceso a los contenidos, hemos implementado una serie de medidas, entre las que destacan:
+•	Panel de Herramientas de Accesibilidad: La web cuenta con una interfaz de asistencia que permite a los usuarios personalizar la experiencia de navegación según sus necesidades. Estas herramientas incluyen funcionalidades para:
+•	Ajustar el tamaño del texto.
+•	Modificar el contraste de colores para mejorar la legibilidad.
+•	Ofrecer guías de lectura y resaltar enlaces.
+•	Otras funcionalidades diseñadas para asistir a personas con diversas capacidades, incluyendo discapacidad visual o auditiva.
+•	Estándares Técnicos: El sitio web está desarrollado utilizando tecnologías estándar como XHTML 1.1 y Hojas de Estilo en Cascada (CSS), siguiendo las recomendaciones del W3C para garantizar la correcta visualización en diferentes navegadores y la compatibilidad con tecnologías de asistencia.
+•	Navegación Coherente: Se ha procurado mantener una estructura de navegación clara y consistente en todo el sitio web.
+•	Texto Alternativo: Las imágenes relevantes para el contenido incluyen descripciones de texto alternativo para que los lectores de pantalla puedan interpretarlas.
+
+
+Seguimos trabajando 
+A pesar de nuestros esfuerzos, es posible que algunos contenidos o secciones del sitio web presenten barreras de accesibilidad. Estamos trabajando continuamente para solucionar estos problemas. El contenido que podría no ser accesible incluye:
+•	Contenido de terceros: Algunos contenidos incrustados, como vídeos de plataformas externas o documentos ofimáticos, pueden no cumplir plenamente con los estándares de accesibilidad, ya que su control escapa a nuestra gestión directa.
+•	Carga desproporcionada: Podría existir algún contenido muy específico cuya adaptación completa a los estándares suponga una carga desproporcionada, tal y como se contempla en el Artículo 7. Carga desproporcionada. del Real Decreto 1112/2018. En estos casos, procuraremos ofrecer una alternativa accesible.
+Preparación de esta Declaración de Accesibilidad
+La presente declaración fue preparada en mayo de 2026.
+El método empleado para la preparación de la declaración ha sido una autoevaluación llevada a cabo por la propia entidad.
+Comunicaciones sobre Requisitos de Accesibilidad y Quejas
+De acuerdo con el Artículo 10. Mecanismos de comunicación. del Real Decreto 1112/2018, ponemos a disposición de los usuarios un canal para comunicar cualquier dificultad de acceso o incumplimiento de los requisitos de accesibilidad, así como para formular quejas o solicitar información accesible.
+Puede realizar sus comunicaciones a través de la siguiente dirección de correo electrónico: info@isaens.com 
+Las comunicaciones pueden ser:
+•	Comunicaciones sobre requisitos de accesibilidad: Para informar sobre cualquier posible incumplimiento por parte de este sitio web.
+•	Solicitudes de información accesible y quejas: Para solicitar información relativa a contenidos que estén excluidos del ámbito de aplicación o exentos por suponer una carga desproporcionada.
+Procedimiento de Reclamación
+Si una vez realizada una solicitud de información accesible o queja, esta hubiera sido desestimada o no estuviera de acuerdo con la decisión adoptada, podrá iniciar una reclamación formal.
+Este procedimiento está regulado en el Artículo 13. Procedimiento de reclamación. del Real Decreto 1112/2018 y deberá dirigirse a la unidad responsable a través de la siguiente dirección de correo electrónico: info@isaens.com 
+ 
+
